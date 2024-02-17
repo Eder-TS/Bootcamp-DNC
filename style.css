@@ -4,6 +4,11 @@
 body{
     margin: 0px;
     padding: 0px;
+
+    background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0) 24.84%),
+                    linear-gradient(0deg, #303030, #303030),
+                    linear-gradient(0deg, #BABABA, #BABABA);
+    background-repeat: no-repeat;
 }
 
     #main{
@@ -62,6 +67,28 @@ body{
             cursor: pointer;
         }
 
-    #background{
-        background-image: linear-gradient(blue, black, black, black);
+    header h1{
+        font-family: "Inter", sans-serif;
+        font-size: 80px;
+        font-weight: 900;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    header h2{
+        font-family: "Inter", sans-serif;
+        font-size: 40px;
+        font-weight: 500;
+        color: white;
+        text-align: center;
+    }
+
+    #dnc-destac{
+        font-weight: 700;
+    }
+
+    .textDestac{
+        color: white;
+        background: black;
     }
