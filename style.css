@@ -1,6 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+:root{
+    --azul-dnc: #0C7CF2;
+    --preto-dnc: #303030;
+    --cinza-hover: #C9C9C9;
+
+    --fonte-padrao: "Inter", sans-serif;
+}
+
 body{
     margin: 0px;
     padding: 0px;
@@ -16,7 +24,7 @@ body{
         height: 100px;
         border: 1px solid black;
         
-        background-color: #303030;
+        background-color: var(--preto-dnc);
 
         display: flex;
         justify-content: space-between;
@@ -26,7 +34,7 @@ body{
     }
 
         #main div a{
-            font-family: "Inter", sans-serif;
+            font-family: var(--fonte-padrao);
             font-size: 25px;
             font-weight: 600;
             color: white;
@@ -35,7 +43,7 @@ body{
         }
 
         #main div a:hover{
-            color: #cccccc;
+            color: var(--cinza-hover);
         }
 
         #menu{
@@ -51,12 +59,12 @@ body{
         #main button{
             margin-right: 5%;
 
-            font-family: "Inter", sans-serif;
+            font-family: var(--fonte-padrao);
             font-size: 18px;
             font-weight: 600;
             color: white;
 
-            background-color: #0C70F2;
+            background-color: var(--azul-dnc);
 
             width: 80px;
             height: 39px;
@@ -67,28 +75,123 @@ body{
             cursor: pointer;
         }
 
-    header h1{
-        font-family: "Inter", sans-serif;
-        font-size: 80px;
-        font-weight: 900;
-        color: white;
-        text-align: center;
-        text-transform: uppercase;
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 30px;
+        margin-bottom: 100px;
     }
 
-    header h2{
-        font-family: "Inter", sans-serif;
-        font-size: 40px;
-        font-weight: 500;
-        color: white;
-        text-align: center;
-    }
+        header{
+            font-family: var(--fonte-padrao);
+            color: white;
+            text-align: center;
+        }
 
-    #dnc-destac{
-        font-weight: 700;
-    }
+            header h1{
+                font-size: 80px;
+                font-weight: 900;
 
-    .textDestac{
-        color: white;
-        background: black;
-    }
+                text-transform: uppercase;
+            }
+
+            header h2{
+                font-size: 40px;
+                font-weight: 500;
+
+            }
+
+                #dnc-destac{
+                    font-weight: 700;
+                }
+
+                .textDestac{
+                    color: white;
+                    background: black;
+                    font-weight: 700;
+                }
+
+        form{
+            font-family: var(--fonte-padrao);
+            font-size: 30px;
+            font-weight: 400;
+            
+            color: white;
+
+            margin-top: 80px;
+            width: 630px;
+        }
+
+            .form-group{
+                display: flex;
+                flex-direction: column;
+                justify-content: left;
+            }
+
+                .form-group input{
+                    font-family: var(--fonte-padrao);
+                    font-size: 20px;
+                    font-weight: 400;
+
+                    height: 46px;
+                    border-radius: 10px;
+                    border: 0px;
+                    padding-left: 18px;
+
+                    background: #FFFFFFE5;
+
+                }
+
+                    .form-group input::placeholder{
+                        color: #39393980;
+                    }
+
+                .form-group label{
+                    margin-top: 8px;
+                    margin-bottom: 8px;
+                }
+
+                #areaOfInterest{
+                    margin-top: 35px;
+                    margin-bottom: 20px;
+                }
+                 
+                .checkbox-itens{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                input[type="checkbox"]{
+                    transform: scale(2.2);
+                    border: 2px solid #CCCCCC;
+                    margin-right: 12px;
+                }
+
+                #areaOfInterest label{
+                    font-size: 25px;
+                    font-weight: 400;
+                }
+
+            input[type="submit"]{
+                font-family: var(--fonte-padrao);
+                font-size: 32px;
+                font-weight: 400;
+                color: white;
+
+                background: #0C70F2E5;
+
+                border-radius: 10px;
+                border: 0px;
+                width: 100%;
+                height: 50px;
+
+                margin-top: 80px;
+
+                box-shadow: 0px 6px 4px 0px #0C70F240;
+
+                cursor: pointer;
+            }
