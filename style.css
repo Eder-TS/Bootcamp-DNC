@@ -195,3 +195,44 @@ body{
 
                 cursor: pointer;
             }
+    
+    footer{
+        font-family: var(--fonte-padrao);
+        color: white;
+
+        background: var(--azul-dnc);
+
+        display: flex;
+        flex-direction: column;
+    }
+
+        #upperLine{
+            font-size: 25px;
+
+            display: flex;
+            flex-direction: row;
+        }
+
+            .footerColumns, .footerColumns ul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footerColumns{
+                padding: 0px 20px 0px 20px;
+            }
+
+            .footerColumns ul{
+                font-weight: 600;
+
+                padding: 0px;
+            }
+
+            footer h4{
+                font-weight: 800;
+
+                background: var(--preto-dnc);
+
+                border-radius: 10px;
+            }
