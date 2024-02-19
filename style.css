@@ -33,18 +33,26 @@ body{
         border-bottom: 1px solid #BABABA;
     }
 
-        #main div a{
-            font-family: var(--fonte-padrao);
-            font-size: 25px;
-            font-weight: 600;
-            color: white;
-            text-decoration: none;
-            text-align: center;
-        }
+    /*All links have the same style*/
+    a{
+        font-family: var(--fonte-padrao);
+        font-size: 25px;
+        font-weight: 600;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+    }
 
-        #main div a:hover{
-            color: var(--cinza-hover);
+    @media only screen and (max-width: 630px){
+        #menu a{
+            font-size: 20px;
+            font-weight: 400;
         }
+    }
+
+    a:hover{
+        color: var(--cinza-hover);
+    }
 
         #menu{
             width: 45%;
@@ -54,6 +62,14 @@ body{
             align-items: center;
 
             margin-left: 2%;
+        }
+
+        @media only screen and (max-width: 630px) {
+            #menu{
+                width: 100%;
+                margin-left: 0px;
+                margin-right: 2%;
+            }
         }
 
         #main button{
@@ -97,10 +113,26 @@ body{
                 text-transform: uppercase;
             }
 
+            @media only screen and (max-width: 630px) {
+                header h1{
+                    font-size: 40px;
+                }
+            }
+
             header h2{
                 font-size: 40px;
                 font-weight: 500;
 
+                min-height: 210px;
+                margin-left: 30%;
+                margin-right: 30%;
+            }
+
+            @media only screen and (max-width: 630px) {
+                header h2{
+                    width: 100%;
+                    margin: auto;
+                }
             }
 
                 #dnc-destac{
@@ -122,6 +154,12 @@ body{
 
             margin-top: 80px;
             width: 630px;
+        }
+
+        @media only screen and (max-width: 630px) {
+            form{
+                width: 100%;
+            }
         }
 
             .form-group{
@@ -200,39 +238,90 @@ body{
         font-family: var(--fonte-padrao);
         color: white;
 
-        background: var(--azul-dnc);
+        background-color: var(--azul-dnc);
 
         display: flex;
         flex-direction: column;
+
+        margin-top: 260px;
     }
 
         #upperLine{
-            font-size: 25px;
-
             display: flex;
             flex-direction: row;
+            justify-content: space-around;
         }
 
-            .footerColumns, .footerColumns ul{
+        @media only screen and (max-width: 630px) {
+            #upperLine{
+                flex-direction: column;
+            }
+        }
+
+            .footerColumns{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-            }
 
-            .footerColumns{
                 padding: 0px 20px 0px 20px;
             }
 
-            .footerColumns ul{
-                font-weight: 600;
+                footer h4{
+                    font-size: 28px;
+                    font-weight: 700;
 
-                padding: 0px;
-            }
+                    background: var(--preto-dnc);
 
-            footer h4{
+                    border-radius: 10px;
+
+                    margin: 45px 0px 5px 0px;
+                    padding: 10px;
+                }
+
+                .footerColumns ul{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
+                    list-style: none;
+
+                    margin-top: 15px;
+                    padding: 0px;
+                }
+
+                    .footerColumns li{
+                        font-size: 25px;
+                        font-weight: 400;
+
+                        margin: 5px 0px 35px 0px;
+                    }  
+
+            #adress{
+                font-size: 20px;
                 font-weight: 800;
 
-                background: var(--preto-dnc);
-
-                border-radius: 10px;
+                text-align: center;
+                
+                width: 22%;
+                padding-top: 10%;
             }
+
+            @media only screen and (max-width: 630px) {
+                #adress{
+                    text-align: center;
+                    
+                    width: 100%;
+                    padding: 0px;
+                    margin: auto;
+                }
+            }
+
+        #legals{
+            margin: auto;
+            padding-bottom: 40px;
+        }
+
+        #legals a:first-child{
+            padding-right: 8px;
+            border-right: 3px solid white;
+        }
